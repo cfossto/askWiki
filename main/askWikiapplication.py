@@ -22,15 +22,15 @@ class Application:
             topic_from_wiki = wiki.get_article(topic)
             summary_of_wiki = summary.summarize_wiki(topic_from_wiki)
 
-            question = input("What do you want to know about the subject?")
+            question = input("What do you want to know about the subject? ")
 
-            answer = comprehension.ask_wiki(question,summary_of_wiki)
+            answer = comprehension.ask_wiki(question,topic_from_wiki)
 
             print("This is what I understand about the subject: \n")
 
-            print(answer[answer])
+            print(answer)
 
-            choice = input("\n Want to know more? Then write y for yes and n for no")
+            choice = input("\n Want to know more? Then write y for yes and n for no: ")
 
             if choice == "n":
-                __state = False
+                state = False

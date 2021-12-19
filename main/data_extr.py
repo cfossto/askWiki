@@ -27,7 +27,7 @@ class WikiArticles:
 
             # Formatted article to string
             article_as_string = "".join(formatted_article)
-            #print(article_as_string)
+            print(article_as_string)
 
             return article_as_string
 

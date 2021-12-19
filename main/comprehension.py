@@ -1,10 +1,14 @@
 from transformers import pipeline
 
+
 class Comprehension:
 
     def ask_wiki(self,user_question,context):
         QA = pipeline("question-answering")
-        uq = user_question.encode()
 
-        result = QA(uq,context)
-        print(result)
+        qa_input = { 'question':f'{user_question}',
+                     'context':f'{context}'
+                     }
+
+        result = QA(qa_input)
+        return result
