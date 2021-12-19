@@ -25,10 +25,11 @@ class Application:
             question = input("What do you want to know about the subject? ")
 
             answer = comprehension.ask_wiki(question,topic_from_wiki)
+            true_score = int(answer["score"]*100)
+            true_answer = answer["answer"]
 
             print("This is what I understand about the subject: \n")
-
-            print(answer)
+            print(f"I am {true_score}% confident that the anwser is: {true_answer}")
 
             choice = input("\n Want to know more? Then write y for yes and n for no: ")
 
